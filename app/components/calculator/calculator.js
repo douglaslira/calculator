@@ -93,19 +93,7 @@
                 }
             },
             getInterest: function(v,m,i){
-
-                var j = v * i * 1;
-                var y = 0;
-                for(var x = 0; x > m; x++) {
-                    y += j
-                }
-                // var taxa = i / 100, xyz = v * (1 + taxa * m);
-                // var result = xyz / m;
-                //
-                //
-                // console.log(v, m, i, "<-----");
-                var result = v * (1 + i)^m;
-                console.log(result, y, "OK");
+                return v * Math.pow((1 + (i / 100)), m);
             }
         };
     }
