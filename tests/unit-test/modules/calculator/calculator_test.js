@@ -18,6 +18,14 @@ describe('CalculatorController::Test', function() {
         expect(vm.expressionResult).toEqual('R$ 0,00');
     });
 
+    it('should check value of requiredField default', function () {
+        expect(vm.requiredField).toEqual(false);
+    });
+
+    it('should check value of requiredField default', function () {
+        expect(vm.send).toEqual(false);
+    });
+
     it('should check value of expression', function () {
         vm.insertChar('1');
         expect(vm.expression).toEqual('1');
