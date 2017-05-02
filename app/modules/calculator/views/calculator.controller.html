@@ -52,9 +52,9 @@
             <div class="col-md-6">
                 <div class="row" style="margin-bottom: 24px">
                     <div class="form-group">
-                        <label class="container-label-form">Months</label>
-                        <!--<input type="email" class="form-control container-field-select">-->
+                        <label class="container-label-form">Months <span class="container-form-required">*</span></label>
                         <dropdown placeholder="Choose an option..." list="vm.months" selected="vm.month" property="name"></dropdown>
+                        <div class="container-form-required-text" ng-if="vm.requiredField">is required</div>
                     </div>
                 </div>
                 <div class="row">
@@ -66,9 +66,11 @@
                         <input type="text" class="form-control container-field-summarize" ng-readonly="true" ng-model="vm.expressionResult">
                     </div>
                 </div>
+                <div class="row" ng-if="vm.send">{{vm.resultToSend | json}}</div>
                 <div class="row">
-                    <button type="button" class="container-btn-get-quote">Get Quote</button>
+                    <button type="button" class="container-btn-get-quote" ng-click="vm.sendResult()">Get Quote</button>
                 </div>
+
             </div>
 
         </div>

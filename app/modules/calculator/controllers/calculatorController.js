@@ -11,6 +11,9 @@
         var resultExpression = 0;
 
         vm.expressionResult = "R$ 0,00";
+        vm.requiredField = false;
+        vm.send = false;
+        vm.resultToSend = {};
         vm.calculateExpression = function(){
             var postfix = calculator.checkExpression(vm.expression);
             resultExpression = parseFloat(calculator.resolveExpression(postfix.trim())).toFixed(2);
@@ -37,8 +40,25 @@
         };
 
         vm.calculateInterest = function(){
-            var resultInterest = calculator.getInterest(resultExpression, vm.month.numberOfMonths, vm.month.interest);
-            console.log(vm.month, resultInterest, "AAAAAAAAAAAA");
+            if(vm.month){
+                var resultInterest = parseFloat(calculator.getInterest(resultExpression, vm.month.numberOfMonths, vm.month.interest)).toFixed(2);
+                vm.requiredField = false;
+                vm.expressionResult = "R$ "+resultInterest;
+            } else {
+                vm.requiredField = true;
+            }
+        };
+
+        vm.sendResult = function(){
+            if(resultExpression && !vm.requiredField) {
+                vm.send = true;
+                vm.resultToSend = {
+                    interest: vm.month.interest,
+                    loan: resultExpression,
+                    numberOfMonths: vm.month.numberOfMonths,
+                    totalDebt: vm.expressionResult
+                };
+            }
         };
 
         // EXTRA ///////////////////////////////////////////////////////////////////////////////////////////////////////

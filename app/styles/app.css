@@ -50,6 +50,19 @@ html, body, .container-table {
     padding: 61px;
 }
 
+.container-form-required {
+    width: 13px;
+    height: 12px;
+    color: #f5984c;
+}
+
+.container-form-required-text {
+    float: left;
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    color: #00b34a;
+}
+
 .container-output {
     padding: 10px;
     float: left;
@@ -143,7 +156,7 @@ html, body, .container-table {
     text-align: center;
     color: #ffffff;
     border: 0px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .container-label-form {
