@@ -1,0 +1,76 @@
+<div class="row vertical-center-row">
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 container-text-header">
+            <span class="text-center">Personal Loan</span>
+        </div>
+        <div class="col-md-8 col-md-offset-2 container-text-subtitle">
+            <span class="text-center">Save and no red tape loan.</span>
+        </div>
+    </div>
+
+    <div class="text-center col-md-8 col-md-offset-2 container-form">
+
+        <div class="col-md-12">
+
+            <div class="col-md-6">
+                <!-- CALCULATOR -->
+                <div class="row">
+                    <input type="text" class="container-output" ng-readonly="true" ng-model="vm.expression">
+                </div>
+                <div class="row">
+                    <div class="container-btn-1 border-left" ng-click="vm.backspaceBtn();"><</div>
+                    <div class="container-btn-1" ng-click="vm.insertChar('(');">(</div>
+                    <div class="container-btn-1 border-right" ng-click="vm.insertChar(')');">)</div>
+                    <div class="container-btn-2 border-right border-left" ng-click="vm.insertChar('+');">+</div>
+                </div>
+                <div class="row">
+                    <div class="container-btn-1" ng-click="vm.insertChar(1);">1</div>
+                    <div class="container-btn-1" ng-click="vm.insertChar(2);">2</div>
+                    <div class="container-btn-1" ng-click="vm.insertChar(3);">3</div>
+                    <div class="container-btn-2" ng-click="vm.insertChar('-');">-</div>
+                </div>
+                <div class="row">
+                    <div class="container-btn-1" ng-click="vm.insertChar(4);">4</div>
+                    <div class="container-btn-1" ng-click="vm.insertChar(5);">5</div>
+                    <div class="container-btn-1" ng-click="vm.insertChar(6);">6</div>
+                    <div class="container-btn-2" ng-click="vm.insertChar('*');">*</div>
+                </div>
+                <div class="row">
+                    <div class="container-btn-1" ng-click="vm.insertChar(7);">7</div>
+                    <div class="container-btn-1" ng-click="vm.insertChar(8);">8</div>
+                    <div class="container-btn-1" ng-click="vm.insertChar(9);">9</div>
+                    <div class="container-btn-2" ng-click="vm.insertChar('/');">/</div>
+                </div>
+                <div class="row">
+                    <div class="container-btn-3 border-b-left" ng-click="vm.insertChar(0);">0</div>
+                    <div class="container-btn-1 border-b-right" ng-click="vm.insertChar('.');">.</div>
+                    <div class="container-btn-2 border-b-right border-b-left" ng-click="vm.calculateExpression();">=</div>
+                </div>
+            </div>
+            <!-- OPTIONS -->
+            <div class="col-md-6">
+                <div class="row" style="margin-bottom: 24px">
+                    <div class="form-group">
+                        <label class="container-label-form">Months</label>
+                        <!--<input type="email" class="form-control container-field-select">-->
+                        <dropdown placeholder="Choose an option..." list="vm.months" selected="vm.month" property="name"></dropdown>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="button" class="container-btn-calculate" ng-click="vm.calculateInterest();">Calculate</button>
+                </div>
+                <div class="row" style="margin-top: 10px">
+                    <div class="form-group">
+                        <label class="container-label-form">Total</label>
+                        <input type="text" class="form-control container-field-summarize" ng-readonly="true" ng-model="vm.expressionResult">
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="button" class="container-btn-get-quote">Get Quote</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

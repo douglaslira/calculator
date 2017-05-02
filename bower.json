@@ -1,0 +1,36 @@
+{
+  "name": "liferay-test",
+  "description": "Project for Liferay",
+  "version": "0.0.1",
+  "homepage": "https://github.com/douglaslira/liferay-test",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "html5-boilerplate": "~5.2.0",
+    "bootstrap": "^3.3.7"
+  },
+  "authors": [
+    "Douglas Lira <douglas.lira.web@gmail.com>"
+  ],
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "AngularJS",
+    "Javascript",
+    "Boilerplate",
+    "Karma"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,16 @@
+<div class="dropdown-container" ng-class="{ show: listVisible }">
+    <div class="dropdown-display container-select-custom" ng-click="show();" ng-class="{ clicked: listVisible }">
+        <span ng-if="!isPlaceholder" class="container-select-custom-placeholder">{{display}}</span>
+        <span class="placeholder container-select-custom-label" ng-if="isPlaceholder">{{placeholder}}</span>
+		<i class="fa fa-angle-down"></i>
+    </div>
+    <div class="dropdown-list">
+        <div class="container-select-custom-items">
+            <input type="text" class="form-control container-select-custom-search" placeholder="Search item" ng-model="q">
+            <div ng-repeat="item in list | filter:q" ng-click="select(item)" ng-class="{ selected: isSelected(item) }">
+                <span>{{property !== undefined ? item[property] : item}}</span>
+                <i class="fa fa-check"></i>
+            </div>
+        </div>
+    </div>
+</div>
