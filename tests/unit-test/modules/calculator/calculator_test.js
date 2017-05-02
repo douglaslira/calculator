@@ -22,7 +22,7 @@ describe('CalculatorController::Test', function() {
         expect(vm.requiredField).toEqual(false);
     });
 
-    it('should check value of requiredField default', function () {
+    it('should check value of send default', function () {
         expect(vm.send).toEqual(false);
     });
 
